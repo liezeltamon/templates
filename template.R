@@ -58,3 +58,6 @@ end_time <- Sys.time()
 end_time - start_time 
 
 # rm(list=ls()); gc()
+
+session_info <- devtools::session_info()
+saveRDS(session_info, file=paste0(out_dir, "/session_info.rds"))
